@@ -39,7 +39,9 @@ int main() {
     std::cout << "--- Comienza el SOLITARIO --- " << std::endl;
     // leer tablero
     Juego juego;
-    generarTablero(6,6);
+    int pasos = 8;
+    int dimension = 6;
+    generarTablero(dimension,pasos);//elige la dimesion y el numero de pasos
     std::ifstream fichero;
     fichero.open("tablero.txt");
     fichero >> juego;

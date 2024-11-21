@@ -20,4 +20,8 @@ $(EXEC): $(OBJ)
 
 # Clean generated files
 clean:
-	rm -f $(OBJ) $(EXEC)
+ifeq ($(OS),Windows_NT)
+	del /Q main.exe *.o
+else
+	rm -f main main.exe *.o
+endif
